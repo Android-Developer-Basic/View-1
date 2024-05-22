@@ -1,6 +1,7 @@
 package otus.gbp.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
@@ -34,6 +35,15 @@ class MainActivity : AppCompatActivity() {
             }
 
             main.addView(newText, textIndex)
+
+            Log.i(TAG, "Top: ${text.top}")
+            Log.i(TAG, "Left: ${text.left}")
+            Log.i(TAG, "Width: ${text.width}")
+            Log.i(TAG, "Height: ${text.height}")
         }
+    }
+
+    companion object {
+        const val TAG = "MainActivity"
     }
 }
