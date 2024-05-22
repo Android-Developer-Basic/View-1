@@ -4,5 +4,6 @@
     <string name="to">To</string>
     <string name="subject">Subject</string>
     <string name="message">Message</string>
+    <string name="cancel">Cancel</string>
     <string name="send">Send</string>
 </resources>
