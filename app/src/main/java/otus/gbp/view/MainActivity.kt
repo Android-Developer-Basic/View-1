@@ -16,22 +16,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        replaceText()
-    }
-
-    private fun replaceText() = with(binding) {
-        change.setOnClickListener {
-            text.text = "Some text"
-
-            Log.i(TAG, "Top: ${text.top}")
-            Log.i(TAG, "Left: ${text.left}")
-            Log.i(TAG, "Width: ${text.width}")
-            Log.i(TAG, "Height: ${text.height}")
-        }
-    }
-
-    companion object {
-        const val TAG = "MainActivity"
     }
 }

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">View</string>
     <string name="change">Change</string>
+    <string name="to">To</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
 </resources>
