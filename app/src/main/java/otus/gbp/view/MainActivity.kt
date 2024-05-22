@@ -6,23 +6,25 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import otus.gbp.view.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         replaceText()
     }
 
-    private fun replaceText() {
-        val change: Button = findViewById(R.id.change)
+    private fun replaceText() = with(binding) {
         change.setOnClickListener {
-            val main: ViewGroup = findViewById(R.id.main)
             val textIndex = main.indexOfChild(findViewById(R.id.text))
             main.removeViewAt(textIndex)
 
-            val newText: TextView = TextView(this).apply {
+            val newText: TextView = TextView(this@MainActivity).apply {
                 text = "Changed text"
                 id = R.id.text
                 layoutParams = LinearLayout.LayoutParams(
