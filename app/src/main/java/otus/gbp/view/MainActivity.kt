@@ -22,19 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun replaceText() = with(binding) {
         change.setOnClickListener {
-            val textIndex = main.indexOfChild(findViewById(R.id.text))
-            main.removeViewAt(textIndex)
-
-            val newText: TextView = TextView(this@MainActivity).apply {
-                text = "Changed text"
-                id = R.id.text
-                layoutParams = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                )
-            }
-
-            main.addView(newText, textIndex)
+            text.text = "Some text"
 
             Log.i(TAG, "Top: ${text.top}")
             Log.i(TAG, "Left: ${text.left}")
